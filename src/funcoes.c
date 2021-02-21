@@ -2,6 +2,8 @@
 
 #include "funcoes.h"
 
+#define PI 3.1415
+
 
 float f1(float x) {
     return 5.0;
@@ -16,7 +18,7 @@ float f2(float x) {
 float calc_area(int numero_threads, int numero_trapezios) {
     float h, area_total;
     float a = 0.0;
-    float b = 10.0;
+    float b = 10;
 
     h = (b - a) / numero_trapezios;
     area_total = (f1(a) + f1(b))/2;
