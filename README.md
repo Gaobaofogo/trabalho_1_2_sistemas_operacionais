@@ -24,5 +24,5 @@ $ make
 E terá o executável 'prog'. Agora basta executá-lo:
 
 ```
-$ ./prog
+$ ./prog 6 120
 ```
