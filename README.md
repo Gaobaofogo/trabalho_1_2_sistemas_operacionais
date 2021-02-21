@@ -2,6 +2,12 @@
 
 ## Como executar o projeto
 
+Instale as dependências:
+
+```
+$ sudo apt-get install gcc g++ cmake
+```
+
 Crie a pasta build na raiz do projeto:
 
 ```
