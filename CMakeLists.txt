@@ -1,11 +1,20 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
-PROJECT(trabalho_1_edb1)
+PROJECT(trabalho_1_2_sistemas_operacionais)
 
 SET(CMAKE_CXX_STANDARD 11)
+
+SET(GCC_COVERAGE_COMPILE_FLAGS "-03")
+SET(GCC_COVERAGE_LINK_FLAGS    "-lm -pthread")
+
+SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
+SET(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS}")
 
 INCLUDE_DIRECTORIES(include/)
 
 ADD_EXECUTABLE(
   prog
-  src/main.cpp
+  src/funcoes.c
+  src/main.c
 )
+
+target_link_libraries(prog m)
