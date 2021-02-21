@@ -2,6 +2,12 @@
 
 ## Como executar o projeto
 
+Crie a pasta build na raiz do projeto:
+
+```
+$ mkdir build
+```
+
 Rode os seguinte comando dentro da pasta build:
 
 ```
