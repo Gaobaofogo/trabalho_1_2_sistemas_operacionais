@@ -13,7 +13,9 @@ INCLUDE_DIRECTORIES(include/)
 
 ADD_EXECUTABLE(
   prog
+  src/calc_math.c
   src/funcoes.c
+  src/threads.c
   src/main.c
 )
 
