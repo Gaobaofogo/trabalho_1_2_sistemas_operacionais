@@ -35,7 +35,6 @@ void calc_trapezios_via_threads(int numero_threads, int numero_trapezios, float 
 
 
     while (qtd_trapezios_calculados < numero_trapezios) {
-        // printf("%d %d\n", i, numero_threads + 1);
         int qtd_trapezios_vez_anterior = qtd_trapezios_calculados;
         qtd_trapezios_calculados += qtd_trapezios_por_thead;
 
@@ -47,7 +46,6 @@ void calc_trapezios_via_threads(int numero_threads, int numero_trapezios, float 
                        qtd_trapezios_calculados - (qtd_trapezios_calculados - numero_trapezios) :
                        qtd_trapezios_calculados;
 
-        printf("%d %d\n", infos[i].inicio, infos[i].fim);
         pthread_create(&ids[i], NULL, calc_trapezios_t, (void*)&infos[i]);
 
         ++i;

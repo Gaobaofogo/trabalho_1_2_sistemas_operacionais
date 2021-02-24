@@ -16,10 +16,6 @@ float calc_area(int numero_threads, int numero_trapezios) {
     h = (b - a) / numero_trapezios;
     area_total = (f2(a) + f2(b))/2;
 
-    // Aqui eu casto explicitamente para float para a divisão ser um float. A divisão de dois inteiros
-    // Gera um inteiro e a função ceil não consegue fazer seu aredondamento corretamente se a divisão
-    // não for inteira.
-
     calc_trapezios_via_threads(
         numero_threads,
         numero_trapezios,
@@ -28,8 +24,6 @@ float calc_area(int numero_threads, int numero_trapezios) {
         v);
 
     for (int i = 1; i < numero_trapezios; ++i) {
-        // float x_i = a + i * h;
-        // printf("%f\n", v[i]);
         area_total += v[i];
     }
 
